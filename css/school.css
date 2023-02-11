@@ -1,0 +1,196 @@
+@charset "utf-8";
+/**
+** type = school
+**/
+
+.wp-make-quiz.school{
+  margin: 0 0 30px 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 5px solid #C59E42;
+  color: #fff;
+  padding: 35px 40px;
+  background: #11754C;
+  border-radius: 5px;
+  letter-spacing: 1.2px;
+  font-size: 15px;
+  line-height: 22px;
+  position: relative;
+}
+.wp-make-quiz.school .wp-make-quiz-title{
+  font-weight: normal;
+  margin: 0 0 1em 0;
+}
+.wp-make-quiz.school .wp-make-quiz-title p:first-of-type{
+  margin-top: 0;
+}
+.wp-make-quiz.school .wp-make-quiz-question{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wp-make-quiz.school .wp-make-quiz-question-list{
+  position: relative;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+/** 選択後の挙動 **/
+.wp-make-quiz.school .wp-make-quiz-question-list.disabled{
+  cursor: auto;
+}
+
+.wp-make-quiz.school .wp-make-quiz-question-list:not(.disabled):hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.wp-make-quiz.school .wp-make-quiz-question-list.incorrect:not(.choice):after{
+  color: #878787;
+}
+
+/** 正解の場合 **/
+.wp-make-quiz.school .wp-make-quiz-question-list.correct.disabled{
+  background: #BE1515;
+}
+
+/** 不正解の場合 **/
+.wp-make-quiz.school .wp-make-quiz-question-list.incorrect.disabled.choice{
+  background: #6EADDE;
+}
+
+
+/***
+** 正解ボックス
+**/
+
+.wp-make-quiz.school .wp-make-quiz-answer{
+  display: none;
+  font-weight: normal;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: wp-make-quiz-school-appear 1s ease;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result.show{
+  display: block;
+  text-align: center;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result.show span{
+  display: inline-block;
+  position: relative;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result{
+  display: none;
+  margin: 1rem 0 2.5rem 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: normal;
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result:before{
+  font-family: "dashicons";
+  display: inline-block;
+  margin-right: 0.2em;
+  line-height: 1;
+  position: relative;
+  top: 3px;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result span:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  display: inline-block;
+  bottom: -1rem;
+  right: 0;
+  left: 0;
+}
+
+/** 正解の場合 **/
+
+.wp-make-quiz.school .wp-make-quiz-result.correct:before{
+  content: "\f159";
+  color: #BE1515;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result.correct span:after{
+  background:#BE1515;
+}
+
+/** 不正解の場合 **/
+
+.wp-make-quiz.school .wp-make-quiz-result.incorrect:before{
+  content: "\f158";
+  color: #6EADDE;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result.incorrect span:after{
+  background: #6EADDE;
+}
+
+.wp-make-quiz.school .wp-make-quiz-result-text{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+.wp-make-quiz.school .wp-make-quiz-kaisetsu{
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+/**もう一回ボタン**/
+.wp-make-quiz.school .wp-make-quiz-continue-wrap{
+  text-align: center;
+}
+
+.wp-make-quiz.school .wp-make-quiz-continue{
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  min-width: 200px;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  margin-top: 40px;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.wp-make-quiz.school .wp-make-quiz-continue:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/**
+** アニメーション
+**/
+@keyframes wp-make-quiz-school-appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
