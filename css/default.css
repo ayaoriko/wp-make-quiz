@@ -51,10 +51,10 @@
 .wp-make-quiz.default .wp-make-quiz-question-list:after{
   font-family: "dashicons";
   position: absolute;
-  top: -2px;
   left: 10px;
   font-size: 32px;
   color: #fff;
+  line-height: 1;
 }
 
 .wp-make-quiz.default .wp-make-quiz-question-list.disabled{
@@ -155,6 +155,7 @@
 
 /**もう一回ボタン**/
 .wp-make-quiz.default .wp-make-quiz-continue-wrap{
+  margin-top: 1em;
   text-align: center;
 }
 

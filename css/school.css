@@ -9,7 +9,7 @@
   box-sizing: border-box;
   border: 5px solid #C59E42;
   color: #fff;
-  padding: 35px 40px;
+  padding: 35px 5%;
   background: #11754C;
   border-radius: 5px;
   letter-spacing: 1.2px;
@@ -88,6 +88,7 @@
 .wp-make-quiz.school .wp-make-quiz-result.show{
   display: block;
   text-align: center;
+  line-height: 1;
 }
 
 .wp-make-quiz.school .wp-make-quiz-result.show span{
