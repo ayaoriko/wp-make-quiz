@@ -15,7 +15,6 @@ function wp_make_quiz_lib(){
     wp_enqueue_script('wp_make_quiz', plugins_url('script/script.js', __FILE__), array(), false, true);
   }
 }
-<?php _e('Hello', 'テーマ名'); ?>
 
 add_action('wp_enqueue_scripts', 'wp_make_quiz_lib');
 function wp_make_quiz_show_text($atts, $title = null){
@@ -58,9 +57,9 @@ function wp_make_quiz_show_text($atts, $title = null){
 
   $html .= '<div class="wp-make-quiz-answer">';
   $html .= '<div class="wp-make-quiz-result-wrap">';
-  $html .= '<p class="wp-make-quiz-result correct"><span>'._e('That is correct!', 'quiz-make-plugin').'</span></p>';
-  $html .= '<p class="wp-make-quiz-result incorrect"><span>'._e('That is wrong!  ', 'quiz-make-plugin').'</span></p>';
-  $html .= '<p class="wp-make-quiz-result-text">'._e('The correct answer is','quiz-make-plugin').'<span>'.$answer.'</span>です。</p>';
+  $html .= '<p class="wp-make-quiz-result correct"><span>正解！</span></p>';
+  $html .= '<p class="wp-make-quiz-result incorrect"><span>不正解...</span></p>';
+  $html .= '<p class="wp-make-quiz-result-text">正解は<span>'.$answer.'</span>です。</p>';
   $html .= '</div>';
   if(isset($atts['commentary']) && $atts['commentary'] !=''){
     $html .= '<div class="wp-make-quiz-commentary"><p>'.$atts['commentary'].'</p></div>';
@@ -100,12 +99,3 @@ function add_shortcode_quicktags() {
 <?php
   }
 }
-
-/**
- * 多言語化対応
- * **/
-load_plugin_textdomain (
-	'quiz-make-plugin',
-	false,
-	plugin_basename( dirname( __FILE__ ) ) . '/languages'
-);
