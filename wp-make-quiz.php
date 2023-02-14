@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: 日本語クイズ作成プラグインすみれ quiz make plugin "sumire"
-Description: You can create multiple-choice quizzes with shortcodes.
-Version: 1.0
+Plugin Name: Quiz make plugin "sumire" 日本語クイズ作成プラグイン「すみれ」
+Plugin URI: https://github.com/ayaoriko/wp-make-quiz
+Description: You can create multiple-choice quizzes with shortcodes. ショートコードを使用して多肢選択式クイズを作成できます。
+Version: 1.1
 Author: Yoshihiko Yoshida's product was modified by ayaoriko.
-Text Domain: quiz-make-plugin
 Domain Path: /languages
 */
 
