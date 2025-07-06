@@ -41,6 +41,7 @@
 }
 
 /** 選択後の挙動 **/
+
 .wp-make-quiz.default .wp-make-quiz-question-list.disabled{
   cursor: auto;
   padding: 10px 10px 10px 50px;
@@ -56,6 +57,10 @@
   font-size: 32px;
   color: #fff;
   line-height: 1;
+}
+
+.wp-make-quiz.default.css_type_google .wp-make-quiz-question-list:after{
+    font-family: 'Material Symbols Outlined';
 }
 
 .wp-make-quiz.default .wp-make-quiz-question-list.disabled{
@@ -75,6 +80,14 @@
 .wp-make-quiz.default .wp-make-quiz-question-list.correct.disabled:after{
   content: "\f147";
 }
+.wp-make-quiz.default.css_type_google .wp-make-quiz-question-list.correct.disabled:after{
+    content: 'check';
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
 
 /** 不正解の場合 **/
 .wp-make-quiz.default .wp-make-quiz-question-list.incorrect.disabled.choice{
@@ -84,6 +97,15 @@
 
 .wp-make-quiz.default .wp-make-quiz-question-list.incorrect.disabled:after{
   content: "\f158";
+}
+
+.wp-make-quiz.default.css_type_google .wp-make-quiz-question-list.incorrect.disabled:after{
+	content: "close";
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 /***
@@ -124,6 +146,12 @@
   top: 3px;
 }
 
+.wp-make-quiz.default.css_type_google .wp-make-quiz-result:before{
+  font-family: 'Material Symbols Outlined';
+}
+
+
+
 /** 正解の場合 **/
 .wp-make-quiz.default .wp-make-quiz-result.correct{
   color: #68AF15;
@@ -134,6 +162,17 @@
   color: #68AF15;
 }
 
+
+.wp-make-quiz.default.css_type_google .wp-make-quiz-result.correct:before{
+    content: 'check_circle';
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    display: inline-block;
+}
+
 /** 不正解の場合 **/
 .wp-make-quiz.default .wp-make-quiz-result.incorrect{
   color: #BE1515;
@@ -142,6 +181,16 @@
 .wp-make-quiz.default .wp-make-quiz-result.incorrect:before{
   content: "\f153";
   color: #BE1515;
+}
+
+.wp-make-quiz.default.css_type_google .wp-make-quiz-result.incorrect:before{
+	content: "close";
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+	  display: inline-block;
 }
 
 .wp-make-quiz.default .wp-make-quiz-result-text{
